@@ -1,0 +1,10 @@
+{
+  "name": "depguard-jury-demo",
+  "version": "1.0.0",
+  "description": "Deterministic dependency set for the DepGuard jury demonstration",
+  "dependencies": {
+    "express": "4.18.2",
+    "lodash": "4.17.20",
+    "demo-malicious-package": "1.0.0"
+  }
+}

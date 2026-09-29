@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b1120;
+    color: #e5e7eb;
+}
+
+.container {
+    width: min(1150px, 94%);
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.header p {
+    margin: 6px 0 0;
+    color: #94a3b8;
+}
+
+.demo-badge {
+    padding: 8px 14px;
+    border: 1px solid #475569;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.upload-card,
+.card {
+    background: #111827;
+    border: 1px solid #263244;
+    border-radius: 16px;
+    padding: 26px;
+    margin-bottom: 22px;
+}
+
+.upload-card h2,
+.card h2 {
+    margin-top: 0;
+}
+
+.muted {
+    color: #94a3b8;
+}
+
+.upload-area {
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    cursor: pointer;
+    padding: 12px 18px;
+    border: 1px dashed #64748b;
+    border-radius: 10px;
+    color: #cbd5e1;
+}
+
+.file-label:hover {
+    border-color: #38bdf8;
+}
+
+#fileName {
+    color: #94a3b8;
+}
+
+button {
+    border: 0;
+    border-radius: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    background: #2563eb;
+    color: white;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.status {
+    margin-top: 16px;
+    min-height: 20px;
+    color: #94a3b8;
+}
+
+.risk-card {
+    background: #111827;
+    border: 1px solid #263244;
+    border-radius: 16px;
+    padding: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.section-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #94a3b8;
+    margin: 0 0 8px;
+}
+
+#overallRisk {
+    margin: 0;
+    font-size: 34px;
+}
+
+#projectName {
+    color: #94a3b8;
+}
+
+.score {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.score small {
+    font-size: 20px;
+    color: #94a3b8;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.summary-card {
+    background: #111827;
+    border: 1px solid #263244;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #94a3b8;
+}
+
+.summary-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e5e7eb;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 15px 12px;
+    border-bottom: 1px solid #263244;
+}
+
+th {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+td {
+    color: #e2e8f0;
+}
+
+.risk-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.risk-low {
+    background: #064e3b;
+    color: #a7f3d0;
+}
+
+.risk-medium {
+    background: #78350f;
+    color: #fde68a;
+}
+
+.risk-high {
+    background: #7f1d1d;
+    color: #fecaca;
+}
+
+.risk-critical {
+    background: #450a0a;
+    color: #fca5a5;
+}
+
+.finding {
+    border: 1px solid #263244;
+    border-radius: 12px;
+    padding: 18px;
+    margin-top: 14px;
+}
+
+.finding-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.finding p {
+    color: #94a3b8;
+    margin: 6px 0;
+}
+
+.recommendation {
+    margin-top: 12px;
+    padding: 12px;
+    border-left: 3px solid #2563eb;
+    background: #0f172a;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 0 40px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+@media (max-width: 750px) {
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .risk-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+}

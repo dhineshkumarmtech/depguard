@@ -1,0 +1,62 @@
+{
+  "demo_mode": true,
+  "description": "DEMO DATA ONLY - deterministic data for the DepGuard jury presentation.",
+  "packages": {
+    "express@4.18.2": {
+      "vulnerabilities": [],
+      "max_cvss": 0.0,
+      "integrity": {
+        "status": "Verified",
+        "expected_hash": "sha512-demo-express-verified",
+        "actual_hash": "sha512-demo-express-verified"
+      },
+      "suspicious_flags": [],
+      "risk_score": 0,
+      "risk_band": "Low",
+      "fix": null
+    },
+
+    "lodash@4.17.20": {
+      "vulnerabilities": [
+        {
+          "id": "CVE-2021-23337",
+          "osv_id": "GHSA-35jh-r3h4-6jhm",
+          "summary": "Prototype pollution vulnerability in lodash.",
+          "severity": "HIGH",
+          "cvss": 7.5,
+          "advisory_url": "https://github.com/advisories/GHSA-35jh-r3h4-6jhm",
+          "fixed_versions": [
+            "4.17.21"
+          ]
+        }
+      ],
+      "max_cvss": 7.5,
+      "integrity": {
+        "status": "Verified",
+        "expected_hash": "sha512-demo-lodash-verified",
+        "actual_hash": "sha512-demo-lodash-verified"
+      },
+      "suspicious_flags": [],
+      "risk_score": 75,
+      "risk_band": "Critical",
+      "fix": "Upgrade lodash to 4.17.21 or later."
+    },
+
+    "demo-malicious-package@1.0.0": {
+      "vulnerabilities": [],
+      "max_cvss": 0.0,
+      "integrity": {
+        "status": "Mismatch",
+        "expected_hash": "sha256-demo-known-good-hash",
+        "actual_hash": "sha256-demo-unexpected-hash"
+      },
+      "suspicious_flags": [
+        "Known malicious package (DEMO DATA)",
+        "Integrity mismatch"
+      ],
+      "risk_score": 25,
+      "risk_band": "Medium",
+      "fix": "Remove and replace this dependency. This package is intentionally included in the DepGuard demo dataset."
+    }
+  }
+}

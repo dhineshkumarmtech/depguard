@@ -1,0 +1,7 @@
+# DepGuard Python sample
+
+requests==2.31.0
+flask>=2.3.0
+django~=4.2.0
+urllib3<=2.0.0
+pytest

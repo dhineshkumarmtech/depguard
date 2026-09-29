@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DepGuard — Supply Chain Security Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header class="header">
+        <div>
+            <h1>🛡 DepGuard</h1>
+            <p>Supply Chain Security Analyzer</p>
+        </div>
+
+        <span class="demo-badge">DEMO MODE</span>
+    </header>
+
+    <main>
+
+        <section class="upload-card">
+            <h2>Analyze Dependencies</h2>
+            <p class="muted">
+                Upload a dependency manifest to analyze package security.
+            </p>
+
+            <div class="upload-area">
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".json,.txt,.xml"
+                >
+
+                <label for="fileInput" class="file-label">
+                    Choose dependency file
+                </label>
+
+                <span id="fileName">No file selected</span>
+
+                <button id="scanButton">
+                    🔍 Scan Dependencies
+                </button>
+            </div>
+
+            <div id="status" class="status"></div>
+        </section>
+
+        <section id="results" class="hidden">
+
+            <div class="risk-card">
+                <div>
+                    <p class="section-label">OVERALL RISK</p>
+                    <h2 id="overallRisk">—</h2>
+                    <p id="projectName">—</p>
+                </div>
+
+                <div class="score">
+                    <span id="overallScore">0</span>
+                    <small>/ 100</small>
+                </div>
+            </div>
+
+            <div class="summary-grid">
+
+                <div class="summary-card">
+                    <span class="summary-number" id="packageCount">0</span>
+                    <span>Packages Scanned</span>
+                </div>
+
+                <div class="summary-card">
+                    <span class="summary-number" id="criticalCount">0</span>
+                    <span>Critical</span>
+                </div>
+
+                <div class="summary-card">
+                    <span class="summary-number" id="mediumCount">0</span>
+                    <span>Medium</span>
+                </div>
+
+                <div class="summary-card">
+                    <span class="summary-number" id="cleanCount">0</span>
+                    <span>Low / Clean</span>
+                </div>
+
+            </div>
+
+            <section class="card">
+                <div class="card-header">
+                    <div>
+                        <h2>Dependency Inventory</h2>
+                        <p class="muted">Security status of analyzed packages</p>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Package</th>
+                                <th>Version</th>
+                                <th>Risk</th>
+                                <th>Score</th>
+                                <th>Integrity</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="packageTable"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Detailed Findings</h2>
+                <div id="findings"></div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            DepGuard Demo • Packages are analyzed only —
+            nothing is installed or executed.
+        </p>
+    </footer>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>

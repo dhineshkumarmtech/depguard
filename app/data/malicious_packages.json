@@ -1,0 +1,7 @@
+{
+  "_comment": "DEMO DATA ONLY - These fake entries are included for testing DepGuard.",
+  "packages": [
+    "demo-malicious-package",
+    "fake-crypto-stealer"
+  ]
+}

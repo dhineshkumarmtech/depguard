@@ -1,0 +1,18 @@
+{
+  "packages": [
+    "express",
+    "lodash",
+    "react",
+    "axios",
+    "requests",
+    "flask",
+    "django",
+    "numpy",
+    "pandas",
+    "urllib3",
+    "pytest",
+    "spring-core",
+    "spring-web",
+    "junit"
+  ]
+}
